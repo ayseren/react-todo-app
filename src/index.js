@@ -4,9 +4,18 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+const DATA = [
+  { id: "todo-0", name: "Eat", completed: true },
+  { id: "todo-1", name: "Sleep", completed: false },
+  { id: "todo-2", name: "Repeat", completed: false }
+];
+//Note: ALL_CAPS constant names have no special meaning in JavaScript;
+//they’re a convention that tells other developers 
+//"this data will never change after being defined here”.
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App tasks={DATA} />
   </React.StrictMode>,
   document.getElementById('root')
 );
